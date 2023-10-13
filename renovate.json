@@ -3,5 +3,11 @@
   "extends": [
     "config:base",
     "regexManagers:dockerfileVersions"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["git/git", "helm/helm"],
+      "extractVersion": "^v(?<version>.*)$"
+    }
   ]
 }
