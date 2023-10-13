@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-# renovate: datasource=github-releases depName=curl lookupName=curl/curl
+# renovate: datasource=github-releases depName=curl lookupName=curl/curl versioning=regex:^curl-(?<major>\\d+)_(?<minor>\\d+)_(?<patch>\\d+)$
 ENV CURL_VERSION=8.0.1
 # renovate: datasource=github-tags depName=Git lookupName=git/git
 ENV GIT_VERSION=2.40.0
