@@ -8,6 +8,11 @@
     {
       "matchPackageNames": ["git/git", "helm/helm"],
       "extractVersion": "^v(?<version>.*)$"
+    },
+    {
+      "matchPackageNames": ["curl/curl"],
+      "extractVersion": "^curl-(?<version>.*)$",
+      "versioning": "regex:^(?<major>\\d+)_(?<minor>\\d+)_(?<patch>\\d+)$"
     }
   ]
 }
