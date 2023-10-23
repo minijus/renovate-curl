@@ -1,0 +1,10 @@
+apiVersion: v2
+name: renovate-bot
+description: A Helm chart for Kubernetes
+type: application
+version: 0.0.1
+dependencies:
+  - name: renovate
+    version: '37.11.1'
+    repository: 'https://docs.renovatebot.com/helm-charts'
+
