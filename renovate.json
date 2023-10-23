@@ -4,6 +4,10 @@
     "config:base",
     "regexManagers:dockerfileVersions"
   ],
+  "helmv3": {
+    "enabled": true,
+    "bumpVersion": "patch"
+  },
   "packageRules": [
     {
       "matchPackageNames": ["git/git", "helm/helm"],
