@@ -8,6 +8,14 @@
     "enabled": true,
     "bumpVersion": "patch"
   },
+  "regexManagers": [
+    {
+      "fileMatch": ["^Dockerfile$"],
+      "matchStrings": ["FROM (?<depName>\\S+):(?<currentValue>\\S+)"],
+      "depTypeList": ["docker"],
+      "datasourceTemplate": "docker"
+    }
+  ],
   "packageRules": [
     {
       "matchPackageNames": ["git/git", "helm/helm"],
