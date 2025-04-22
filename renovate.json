@@ -22,6 +22,12 @@
       ],
       "extractVersion": "^curl-(?<version>.*)$",
       "versioning": "regex:^(?<major>\\d+)_(?<minor>\\d+)_(?<patch>\\d+)$"
+    },
+    {
+      "matchPackageNames": [
+        "/nxprivatecloud$/"
+      ],
+      "enabled": "false"
     }
   ],
   "customManagers": [
