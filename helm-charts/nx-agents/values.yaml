@@ -1,0 +1,14 @@
+'nx-agents':
+  controller:
+    image:
+      registry: 'docker.io'
+      imageName: 'nx-cloud-workflow-controller'
+      repository: 'nxprivatecloud'
+      tag: '2024.10'
+      pullPolicy: IfNotPresent
+
+  daemonset:
+    image:
+      registry: 'docker.io'
+      imageName: 'ubuntu'
+      tag: '22.04'
