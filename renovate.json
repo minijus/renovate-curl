@@ -34,6 +34,16 @@
       "datasourceTemplate": "docker",
       "depNameTemplate": "{{{repository}}}/nx-cloud-frontend",
       "registryUrlTemplate": "https://{{{registry}}}"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": "helm-charts/nx-agents/values.yaml",
+      "matchStrings": [
+        "registry: '(?<registry>.*?)'\\s*imageName: '(?<imageName>.*?)'\\s*repository: '(?<repository>.*?)'\\s*tag: '(?<currentValue>.*?)'"
+      ],
+      "datasourceTemplate": "docker",
+      "depNameTemplate": "{{{repository}}}/{{{imageName}}}",
+      "registryUrlTemplate": "https://{{{registry}}}"
     }
   ]
 }
