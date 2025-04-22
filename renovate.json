@@ -10,13 +10,30 @@
   },
   "packageRules": [
     {
-      "matchPackageNames": ["git/git", "helm/helm"],
+      "matchPackageNames": [
+        "git/git",
+        "helm/helm"
+      ],
       "extractVersion": "^v(?<version>.*)$"
     },
     {
-      "matchPackageNames": ["curl/curl"],
+      "matchPackageNames": [
+        "curl/curl"
+      ],
       "extractVersion": "^curl-(?<version>.*)$",
       "versioning": "regex:^(?<major>\\d+)_(?<minor>\\d+)_(?<patch>\\d+)$"
+    }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": "helm-charts/nx-cloud/values.yaml",
+      "matchStrings": [
+        "imageRegistry: '(?<registry>.*?)'\\s*imageTag: '(?<currentValue>.*?)'\\s*imageRepository: '(?<repository>.*?)'"
+      ],
+      "datasourceTemplate": "docker",
+      "depNameTemplate": "{{{repository}}}/nx-cloud-frontend",
+      "registryUrlTemplate": "https://{{{registry}}}"
     }
   ]
 }
