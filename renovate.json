@@ -27,7 +27,7 @@
       "matchPackageNames": [
         "/nxprivatecloud$/"
       ],
-      "enabled": "false"
+      "enabled": false
     }
   ],
   "customManagers": [
