@@ -1,5 +1,5 @@
 nxcloud:
   global:
     imageRegistry: 'docker.io'
-    imageTag: '2025.03.1'
+    imageTag: '2406.29.1'
     imageRepository: 'nxprivatecloud'
