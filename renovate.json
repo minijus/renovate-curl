@@ -33,7 +33,9 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": "helm-charts/nx-cloud/values.yaml",
+      "managerFilePatterns": [
+        "/helm-charts/nx-cloud/values.yaml/"
+      ],
       "matchStrings": [
         "imageRegistry: '(?<registry>.*?)'\\s*imageTag: '(?<currentValue>.*?)'\\s*imageRepository: '(?<repository>.*?)'"
       ],
@@ -43,7 +45,9 @@
     },
     {
       "customType": "regex",
-      "fileMatch": "helm-charts/nx-agents/values.yaml",
+      "managerFilePatterns": [
+        "/helm-charts/nx-agents/values.yaml/"
+      ],
       "matchStrings": [
         "registry: '(?<registry>.*?)'\\s*imageName: '(?<imageName>.*?)'\\s*repository: '(?<repository>.*?)'\\s*tag: '(?<currentValue>.*?)'"
       ],
