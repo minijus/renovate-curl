@@ -12,8 +12,7 @@
     {
       "matchPackageNames": [
         "git/git",
-        "helm/helm",
-        "kubernetes"
+        "helm/helm"
       ],
       "extractVersion": "^v(?<version>.*)$"
     },
@@ -56,11 +55,5 @@
       "depNameTemplate": "{{{repository}}}/{{{imageName}}}",
       "registryUrlTemplate": "https://{{{registry}}}"
     }
-  ],
-  "customDatasources": {
-    "kubernetes": {
-      "defaultRegistryUrlTemplate": "https://dl.k8s.io/release/stable.txt",
-      "format": "plain"
-    }
-  }
+  ]
 }
