@@ -28,6 +28,22 @@
         "/nxprivatecloud$/"
       ],
       "enabled": false
+    },
+    {
+      "matchFileNames": [
+        "**/Dockerfile"
+      ],
+      "bumpVersions": [
+        {
+          "name": "Update version in Dockerfile",
+          "filePatterns": [
+            "{{packageFileDir}}/Dockerfile"
+          ],
+          "matchStrings": [
+            "LABEL version\\s*=\\s*\"?(?<version>.+)\"?"
+          ]
+        }
+      ]
     }
   ],
   "customManagers": [
