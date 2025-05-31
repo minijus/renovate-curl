@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 # renovate: datasource=github-releases depName=curl lookupName=curl/curl
-ENV CURL_TAG_VERSION=8_0_1
+ENV CURL_TAG_VERSION=8_14_0
 # renovate: datasource=github-tags depName=Git lookupName=git/git
 ENV GIT_VERSION=2.49.0
 # renovate: datasource=node depName=Node.js lookupName=nodejs/node
