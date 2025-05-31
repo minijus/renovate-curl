@@ -38,7 +38,8 @@
         {
           "name": "Update version in Dockerfile",
           "filePatterns": [
-            "{{packageFileDir}}/Dockerfile"
+            "{{packageFileDir}}/Dockerfile",
+            "Dockerfile"
           ],
           "matchStrings": [
             "LABEL version\\s*=\\s*\"?(?<version>.+)\"?"
