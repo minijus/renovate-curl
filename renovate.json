@@ -31,7 +31,8 @@
     },
     {
       "matchFileNames": [
-        "**/Dockerfile"
+        "**/Dockerfile",
+        "Dockerfile"
       ],
       "bumpVersions": [
         {
