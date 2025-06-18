@@ -30,6 +30,16 @@
       "enabled": false
     },
     {
+      "description": [
+        "Only allow versions starting with 20",
+        "This prevents picking versions published under old pattern, e.g. 2406.29.1"
+      ],
+      "matchPackageNames": [
+        "/^nxprivatecloud\\\//"
+      ],
+      "allowedVersions": "/^20\\d{2}.\\d{2}/"
+    },
+    {
       "matchFileNames": [
         "Dockerfile"
       ],
