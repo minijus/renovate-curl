@@ -4,7 +4,7 @@
       registry: 'docker.io'
       imageName: 'nx-cloud-workflow-controller'
       repository: 'nxprivatecloud'
-      tag: '2025.03'
+      tag: '2025.07'
       pullPolicy: IfNotPresent
 
   daemonset:
