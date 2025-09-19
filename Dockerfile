@@ -9,4 +9,4 @@ ENV GIT_VERSION=2.49.0
 # renovate: datasource=node depName=Node.js lookupName=nodejs/node
 ENV NODEJS_VERSION=22.16.0
 # renovate: datasource=github-releases depName=Helm lookupName=helm/helm
-ENV HELM_VERSION=3.13.0
+ENV HELM_VERSION=3.19.0
