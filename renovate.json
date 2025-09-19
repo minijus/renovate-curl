@@ -4,6 +4,9 @@
     "config:recommended",
     "customManagers:dockerfileVersions"
   ],
+  "registryAliases": {
+    "registry.example.com": "docker.io"
+  },
   "helmv3": {
     "enabled": true,
     "bumpVersion": "patch"
