@@ -1,0 +1,35 @@
+name: Basic CI
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Echo Hello
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a7fe9b2f63 # v4.1.6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 # v4.0.3
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Cache npm (redundant example; setup-node already handles npm cache when enabled)
+        uses: actions/cache@36227f272c1ea0b39d0fb4b8a1e4963c52803c1a # v4.0.2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+        if: hashFiles('**/package-lock.json') != ''
+
+      - name: Display versions
+        run: |
+          echo "Node version: $(node -v || echo 'node not installed')"
+          echo "NPM version: $(npm -v || echo 'npm not installed')"
