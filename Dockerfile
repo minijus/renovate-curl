@@ -7,6 +7,6 @@ ENV CURL_TAG_VERSION=8_16_0
 # renovate: datasource=github-tags depName=Git lookupName=git/git
 ENV GIT_VERSION=2.51.0
 # renovate: datasource=node depName=Node.js lookupName=nodejs/node
-ENV NODEJS_VERSION=22.19.0
+ENV NODEJS_VERSION=22.21.1
 # renovate: datasource=github-releases depName=Helm lookupName=helm/helm
 ENV HELM_VERSION=3.19.0
