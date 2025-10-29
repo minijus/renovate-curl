@@ -5,7 +5,8 @@
     "customManagers:dockerfileVersions"
   ],
   "registryAliases": {
-    "registry.example.com": "docker.io"
+    "registry.example.com": "docker.io",
+    "registry-docker.trusted-repository.example.com": "docker.io"
   },
   "helmv3": {
     "enabled": true,
