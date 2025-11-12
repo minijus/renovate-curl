@@ -1,1 +1,1 @@
-FROM registry.example.com/node:22.19.0-alpine3.22
+FROM registry.example.com/node:24.11.1-alpine3.22
