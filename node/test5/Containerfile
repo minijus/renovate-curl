@@ -1,3 +1,3 @@
 FROM registry-docker.trusted-repository.example.com/alpine:3.22.2 AS builder
 
-FROM registry-docker.trusted-repository.example.com/node:22.19.0-alpine3.22
+FROM registry-docker.trusted-repository.example.com/node:24.12.0-alpine3.22
