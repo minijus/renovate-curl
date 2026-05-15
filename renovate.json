@@ -76,6 +76,16 @@
   "customManagers": [
     {
       "customType": "regex",
+      "description": "Track pnpm major version in markdown docs",
+      "managerFilePatterns": ["/node/pnpm-major/workspace\\.md$/"],
+      "matchStrings": ["npm i -g pnpm@(?<currentValue>\\d+)"],
+      "depNameTemplate": "pnpm",
+      "datasourceTemplate": "npm",
+      "extractVersionTemplate": "^(?<version>\\d+)",
+      "versioningTemplate": "regex:^(?<major>\\d+)$"
+    },
+    {
+      "customType": "regex",
       "managerFilePatterns": [
         "/helm-charts/nx-cloud/values.yaml/"
       ],
