@@ -58,22 +58,19 @@
           ]
         }
       ]
-    },
-    {
-      "matchPackageNames": [
-        "actions/checkout",
-        "actions/setup-node",
-        "actions/cache"
-      ],
-      "overrideDatasource": "custom.allowed-github-actions"
     }
   ],
-  "customDatasources": {
-    "allowed-github-actions": {
-      "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/minijus/renovate-curl/refs/heads/main/versions/{{packageName}}.json"
-    }
-  },
   "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Track pnpm major version in markdown docs",
+      "managerFilePatterns": ["/node/pnpm-major/workspace\\.md$/"],
+      "matchStrings": ["npm i -g pnpm@(?<currentValue>\\d+)"],
+      "depNameTemplate": "pnpm",
+      "datasourceTemplate": "npm",
+      "extractVersionTemplate": "^(?<version>\\d+)",
+      "versioningTemplate": "regex:^(?<major>\\d+)$"
+    },
     {
       "customType": "regex",
       "managerFilePatterns": [
